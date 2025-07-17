@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('https://i.imgur.com/YWVm3wB.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 0;
+}
+
+.card {
+  position: relative;
+  z-index: 1;
+  width: 350px;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 255, 234, 0.7);
+  backdrop-filter: blur(12px);
+  text-align: center;
+  color: #00ffe1;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 4px solid #00ffe1;
+  object-fit: cover;
+  margin-bottom: 20px;
+  box-shadow: 0 0 15px #00ffe1;
+  transition: 0.3s ease;
+}
+
+h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 32px;
+  letter-spacing: 3px;
+  margin-bottom: 8px;
+  text-shadow: 0 0 12px #00ffe1;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  color: #a0f5ff;
+  font-weight: 600;
+  text-shadow: 0 0 10px #00ffe1aa;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 12px 0;
+  padding: 14px 24px;
+  border-radius: 12px;
+  background: rgba(0, 255, 225, 0.15);
+  border: 2px solid #00ffe1;
+  color: #00ffe1;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 17px;
+  transition: 0.3s ease;
+  box-shadow: 0 0 8px #00ffe1;
+}
+
+.btn:hover {
+  background: #00ffe1;
+  color: #000;
+  box-shadow: 0 0 18px #00ffe1;
+}
+
+.btn img {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 90%;
+    padding: 30px 20px;
+  }
+
+  h1 {
+    font-size: 26px;
+    letter-spacing: 1.8px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .btn {
+    font-size: 15px;
+    padding: 12px 18px;
+    gap: 10px;
+  }
+
+  .btn img {
+    width: 20px;
+    height: 20px;
+  }
+}
